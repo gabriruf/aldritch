@@ -1,0 +1,8 @@
+services:
+  app:
+    build: . # creates an image based on Dockerfile in root dir.
+    container_name: escola_api
+    ports:
+      - "8000:8000" # maps host port to container port (based on Dockerfile)
+    volumes:
+      - .:/app # same as workdir in Dockerfile
